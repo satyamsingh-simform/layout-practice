@@ -54,6 +54,7 @@ h1,p{
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 button{
     height:50px ;
