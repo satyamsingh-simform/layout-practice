@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid salmon;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(230, 224, 224);
+    display: flex;
+    flex-direction: column;
+    /* margin: 10px; */
+}
+.round{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+header{
+    flex: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-div{
+    display: flex;
+    align-items: center;
+}
+main{
+    flex: 95;
+    display: flex;
+}
+aside{
+    flex: 3;
+}
+
+.aside-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.aside-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    flex: 46;
+}
+.sec-right{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.card{
+    margin: 10px;
+    height: 12rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+.img-div{
+    flex: 75;
+}
+.text-div{
+    flex: 25;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+.sec-right{
+    display: flex;
+    flex-direction: column;
+}
+.div-top{
+    margin: 10px;
+    flex: 50;
+}
+.div-bottom{
+    margin: 10px;
+    flex: 50;
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    flex: 10;
+}
+.bottom-text{
+    flex: 80;
+}
+.btn{
+    /* text-align: center; */
+    flex: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

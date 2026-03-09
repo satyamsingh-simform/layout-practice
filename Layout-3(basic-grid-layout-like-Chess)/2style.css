@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 30vw;
+    width: 30vw;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.box-white{
+    background-color: white;
+}
+.box-black{
+    background-color: black;
+}

@@ -1,0 +1,328 @@
+/*Types of CSS selectors
+    1. Universal Selector (*)
+        Use: Targets all elements on the page.
+        Syntax: * { margin: 0; padding: 0; }
+
+    2. Element Selector (Tag Selector)
+        Use: Targets HTML elements by their tag name.
+        Syntax: p { color: blue; }
+
+    3. Class Selector (.)
+        Use: Targets elements with a specific class.
+        Syntax: .box { background-color: yellow; }
+
+    4. ID Selector (#)
+        Use: Targets a single element with a specific ID.
+        Syntax: #header { font-size: 2rem; }
+
+    5. Group Selector
+        Use: Applies the same style to multiple selectors.
+        Syntax: h1, h2, h3 { color: green; }
+
+    6. Descendant Selector
+        Use: Targets all element inside another element whether child or inner child.
+        Syntax: .card p { color: gray; }
+
+    7. Child Selector (>)
+        Use: Targets an element that is a direct child of another, will not apply to child's child.
+        Syntax: ul > li { list-style: none; }
+
+    8. Adjacent Sibling Selector (+)
+        Use: Targets an element immediately after another.
+        must have the same parent bydefault will have body as there parent, only select one elements.
+        Syntax: h2 + p { color: red; }
+
+    9. General Sibling Selector (~)
+        Use: Targets all elements that are siblings after a given element.
+        Syntax: h2 ~ p { font-style: italic; }
+
+    10. Attribute Selector
+        Use: Targets elements with a specific attribute.
+        Syntax: input[type="text"] { border: 1px solid black; }
+
+
+
+    A.CSS Specificity Order (Highest → Lowest)
+        -Specificity is calculated like this:
+            Inline styles        → 1000
+            ID selector          → 100
+            Class / Attribute / Pseudo-class → 10
+            Element / Pseudo-element → 1
+            Universal (*)        → 0
+
+    B.Combinators like space (descendant), >, +, ~, and , do not add specificity; they only combine selectors.
+        div p → 1 (div) + 1 (p) = 2
+        .box p → 10 (.box) + 1 (p) = 11
+        #id .box p → 100 (#id) + 10 (.box) + 1 (p) = 111
+
+If specificity is equal, the selector written later in the CSS wins.        
+*/
+*{
+    box-sizing: border-box;
+}
+
+div p{
+    background-color: aquamarine;
+}
+.decendent p{
+    background-color: blueviolet;
+}
+span p{
+    background-color: red;
+}
+
+/* div p{
+    background-color: aquamarine;
+} */
+
+span > p{
+    background-color: yellow;
+}
+
+
+h2 + span{
+    background-color: rgb(216, 149, 149);
+}
+h4 + p{
+    background-color: chartreuse;
+}
+
+
+article ~ p{
+    border: 1px solid salmon;
+}
+
+
+/*pseudo class*/
+aside p:last-child{
+    background-color: green;
+}
+aside p:first-child{
+    background-color: green;
+}
+aside p:nth-child(2){
+    background-color: crimson;
+}
+main p:nth-of-type(1){
+    background-color: fuchsia;
+}
+main span:nth-of-type(1){
+    background-color: gold;
+}
+main span:last-of-type{
+    background-color: hotpink;
+}
+main span:first-of-type{
+    background-color: cornflowerblue;
+}
+
+/*pseudo elements*/
+pre::first-letter{
+    font-size: 2rem;
+}
+pre::before{
+    content:"--->";
+}
+pre::first-line{
+    text-decoration: underline;
+    background-color: blueviolet;
+}
+li::marker{
+    color: red;
+}
+li::after{
+    content: "--->";
+}
+
+/*how margin auto trick works*/
+.box{
+    background-color: red;
+    /* margin: 0 auto; */
+}
+.box-para{
+    width: 100px;
+    background-color: blueviolet;
+    margin: 0 auto;
+}
+.box2{
+    width: 200px;
+    /* width: 100%; */
+    background-color: yellowgreen;
+    margin: 0 auto;
+}
+.box-3{
+    height: 200px;
+    width: 500px;
+    border: 10px solid salmon;
+}
+.box-3 img{
+    height: 50%;
+    width: 50%;
+    object-fit:cover;
+    /* object-fit: fill;
+    object-fit: contain; */
+    float: left;
+}
+
+/*Flexbox*/
+.box-4{
+    border: 1px solid salmon;
+    height: 10vh;
+    margin: 50px;
+    display: flex;
+    gap: 300px;
+}
+.item{
+    border: 1px solid black;
+    /* height: 50%; */
+}
+.item1{
+    flex: 2;/*this propert only divide space in main-axis i.e., width in row ,height in column*/
+    background-color: blueviolet;
+}
+.item2{
+    flex: 3;
+    background-color: blueviolet;
+}
+.item3{
+    flex: 3;
+    background-color: blueviolet;
+}
+.item4{
+    flex: 2;
+    background-color: blueviolet;
+}
+@media(max-width:700px){
+    .box-4{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .item2{
+        flex: 2;
+        flex-shrink: 0;
+    }
+}
+
+/* flex direction will identify my main axix 
+        -row: horizontal is main axis
+        -column: vertical is main axis
+        -justify content it will around main axis
+        -align item works around cross axis
+*/
+.box-5{
+    border: 5px solid salmon;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* justify-content: space-between; */
+    gap: 10px;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    align-content:start ;/*when wrap happens then what will be the gap bw rows */
+    /* flex-wrap: wrap-reverse;//move the elements to down vertically even if aling-item not set, so that i can wrap el in top */
+
+    /* align-items: stretch; //if height of FI is not set then strech will work it will strech FI to parent height */
+    /*this is default behaviour if FI height is not set in that case it will strech*/
+}
+.f-box{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+
+.box-6{
+    margin:50px 0;
+    border:5px solid black;
+    height:70px;
+    display:flex;
+    /* gap: 320px; */
+    gap: 10px;
+}
+.fi-box{
+    background-color: aqua;
+    /* height: 100px; */
+    width: 100px;
+    border: 1px solid black;
+}
+.fi-box1{
+    /* order: -1; */
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+.fi-box2{
+    /* order: -1; */
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+.fi-box3{
+    /* order: -1; */
+    flex-shrink: 0;
+}
+.fi-box4{
+    /* order: -1; */
+    flex-basis: 300px;
+    flex-shrink: 0;
+}
+
+/*
+A.Flex Container(fc)
+        jiska display propert ko flex kr denge o fc ban jata h  
+        PROPERTIES-iska khud ka property hota h
+            1.flex-direction
+                :row--jitna v item h fc me sab row-wise me arrange ho jayega(L-R)                    (by default row hi hota h)
+                :row-reverse--jitna v item h fc me sab row me arrange ho jayega(R-L)
+                :column--jitna v item h fc me sab column-wise me arrange ho jayega(T-B)
+                :column-reverse--jitna v item h fc me sab column me arrange ho jayega(B-T)
+
+            2.Flex-wrap
+                :nowrap(bydefault)--jaisa h waise hi rhega khud ko responsive nhi banayega (yaha pe fi khud ka size chhota krega jab tak fi ka content allow krega)    
+                :wrap--khud ko responsive bana lega lkin tvi jab fc ka size chota krege or fi fc se bahar jane lagega tab  
+                :wrap-reverse--fc ke bottom me aa jyega child (L-R)
+
+                SHORTHAND(1&2 sath me set krne keliye)-->flex-flow:row-reverse wrap;
+
+            3.justify-content: main-axis ke around(row wise space distribute krega)
+                :center--fi ko fc ke centre(row wise center) me la dega
+                :space-between--both corner se space nhi dena h pr btw wale me space equal dena h
+                :space-evenly--aab dono corner or btw sab me equal space hoga
+                :space-around--corner wale dono me kaam place or btw wale box ke beech me jayada equal space 
+
+            4.align-item: cross-axis ke around (top-bottom(column) space manage krega)
+                :flex-start--fc ke top me fi ko la dega
+                :center--Vertically(Top-Bottom) centre me fi ko la dega
+                :flex-end--fc ke bottom me fi ko la dega    
+                :strech--if height of FI is not set then strech will work it will strech FI to parent height  //this is default behaviour if FI height is not set in that case it will strech 
+            
+            5.align-centent:when wrap happens then what will be the gap bw rows.
+                :start
+                :center
+                :end etc
+
+B.Flex Item(fi)
+        jisko fc banaye h uske andar wala element(tags) fi ban jayega
+        PROPERTIES-iska v khud ka property hota h
+            1.order
+                :integer--jis v fi ka value jayada hoga o last me jayega
+                :by default order is 0.
+            2.flex-grow
+                :whole no.--jiska value jitna bara hoga o utna jayada available space lega ,gap available space ko kam krta hai.  
+                :default value 0 which means jitna width hai utna lega
+                :main-axis ke side grow krta hai. 
+            3.flex-shrink
+                :whole no.--jiska value jayada hoga o jldi se chhota hoga fc ko chhota krne ke baad
+                :default value for shrink:1 i.e., jb container ko chota krege tb sb ek hi ration se chota hoga 
+                :if we made any FI shrink:0 tb o FI fixed ho gaya o chota nhi hoga FC ko chota krne pe.agar flex grow laga hai uspe tb og size me aane ke baad shrink nhi krega but usse phele shrink:0 krne pe v shrink krega
+            4.flex-basis:it will over-wrote the width which we have provided.
+                :size--kisi v fi ka size change krna ho to yaha value dedo ho jayega
+                -when flex-direction is set to be row flex-basis :will control width
+                -when flex-direction is set to be column flex-basis :will control height
+
+            SHORTHAND(2&3&4)-->flex:2 3 400px    
+
+            5.align-self:it is used to over-write the align-item property for a specific flex item.
+                :center.
+*/

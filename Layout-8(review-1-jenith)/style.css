@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: salmon;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    flex: 7;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search{
+    width:clamp(15rem,30vw,100vw) ;
+    padding: 20px;
+    background-color: red;
+    margin: 0 auto;
+}
+.round{
+    height: 100%;
+    width: 70px;
+    border-radius: 10px;
+}
+
+
+main{
+    flex: 93;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+aside{
+    flex: 20;
+}
+section{
+    flex: 80;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sec-div-top{
+    flex: 45;
+    display: flex;
+    gap: 20px;
+} 
+.top-card{
+    flex: 1;
+}
+.card-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-2{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.card-3{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.sec-div-btm{
+    margin: 0 20px;
+    flex: 55;
+    display: flex;
+    gap: 20px;
+}
+.btm-card{
+    flex: 50;
+}
+.card-4{
+    display: flex;
+    justify-content: end;
+}

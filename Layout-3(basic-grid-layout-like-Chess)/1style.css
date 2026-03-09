@@ -1,0 +1,55 @@
+/*
+display: grid;                             /display grid krte hi uske andar ka child khud ko evenly height me distribute kr lega to fit the container height 
+grid-template-columns: 200px 200px 200px;  /isse property se jitna baar value likhenge utna column banega with mentioned size
+grid-template-rows: 200px 200px;           /isse property se jitna baar value likhenge utna row banega with mentioned size
+
+grid-template-columns:repeat(auto-fill/auto-fit, minmax(200px,1fr)).
+auto-fill: creates as many grid tracks as possible and keeps empty tracks.
+auto-fit: creates tracks but collapses empty ones and stretches items.
+
+| Property        | Applies To     | Controls                                     |
+| --------------- | -------------- | -------------------------------------------- |
+| `place-items`   | Grid container | Alignment of **all grid items inside cells** |
+| `place-content` | Grid container | Alignment of **whole grid inside container** |
+| `place-self`    | Grid item      | Alignment of **single item inside its cell** |
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 2fr 5fr 5fr;
+    grid-template-rows: 1fr 5fr 5fr 1fr;
+    gap: 0.5rem;
+}
+
+header{
+    background-color: bisque;
+    grid-column: 1/-1;
+}
+aside{
+    background-color: red;
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+article{
+    background-color: rgb(142, 139, 133);
+}
+.top{
+    grid-column: 2/-1;
+    background-color: aqua;
+}
+.left{
+    background-color: blueviolet;
+}
+footer{
+    background-color: blue;
+    grid-column: 1/-1;
+}
