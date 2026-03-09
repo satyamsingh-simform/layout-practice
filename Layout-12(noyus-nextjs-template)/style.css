@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(214, 239, 247);
+}
+.container > header{
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding:0 15px;
+    background-color: rgb(240, 236, 236);
+}
+.round{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(156, 152, 152);
+}
+.icon{
+    margin-left: auto;
+}
+.search{
+    padding: 5px;
+    width: clamp(12rem, 25vw, 50vw);
+    margin-right: auto;
+    background-color: gray;
+}
+
+
+main{
+    flex: 95;
+    display: flex;
+}
+
+aside{
+    flex: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 5px black;
+}
+.aside-box-1{
+    flex: 10;
+    border-bottom: 1px solid rgb(226, 220, 220);
+    margin: 0 20px;
+}
+.aside-box-2{
+    flex: 28;
+    border-bottom: 1px solid rgb(226, 220, 220);
+    margin: 0 20px;
+}
+.aside-box-3{
+    flex: 17;
+    border-bottom: 1px solid rgb(226, 220, 220);
+    margin: 0 20px;
+}
+.aside-box-4{
+    flex: 17;
+    border-bottom: 1px solid rgb(226, 220, 220);
+    margin: 0 20px;
+}
+.aside-box-5{
+    flex: 28;
+    margin: 0 20px;
+}
+
+
+
+section{
+    flex: 85;
+    display: flex;
+    flex-direction: column;
+}
+.top-section{
+    flex: 40;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(53, 68, 85);
+}
+.top-sec-head{
+    flex: 15;
+    display: flex;
+    padding:5px 50px;
+    border: none;
+    align-items: center;
+    gap: 10px;
+}
+.top-sec-head p{
+    color: white;
+    border: none;
+}
+.top-sec-search{
+    padding: 17px;
+    width: clamp(12rem, 15vw, 50vw);
+    margin-left: auto;
+    background-color: white;
+}
+.round-lg{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+article{
+    flex: 85;
+    display: flex;
+    gap: 50px;
+    /* align-items: center; */
+    padding: 50px;
+}
+article div{
+    flex: 1;
+    height: 10rem;
+    background-color: white;
+}
+
+
+
+.botm-section{
+    flex: 60;
+    display: flex;
+    padding: 0 50px;
+    gap: 50px;
+    position: relative;
+    top: -60px;
+    /* background-color: white; */
+}
+.botm-div-left{
+    flex: 80;
+    background-color: rgb(50, 50, 58);
+}
+.botm-div-right{
+    flex: 20;
+    background-color: white;
+}
