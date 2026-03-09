@@ -7,7 +7,7 @@
 .container{
     height: 100vh;
     width: 100vw;
-    background-color: salmon;
+    /* background-color: salmon; */
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +20,7 @@ header{
 .search{
     width:clamp(15rem,30vw,100vw) ;
     padding: 20px;
-    background-color: red;
+    background-color: rgb(235, 163, 163);
     margin: 0 auto;
 }
 .round{
