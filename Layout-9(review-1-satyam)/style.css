@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 99vh;
+    width: 99.8vw;
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+}
+
+header{
+    background-color: white;
+    flex: 7;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+    gap: 10px;
+    border: 1px solid rgb(202, 197, 197);
+}
+main{
+    background-color: white;
+    flex: 93;
+    display: flex;
+}
+
+/*header part styling*/
+.round{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+
+/*main part styling*/
+.aside-left{
+    background-color: white;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    border: 1px solid gray;
+}
+.aside-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/*section part styling*/
+section{
+    flex: 70;
+    display: flex;
+    flex-direction: column;
+}
+.sec-div-top{
+    flex: 70;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-content: start;
+    padding: 20px;
+    justify-content:start;
+}
+.card{
+    border: 1px solid black;
+    min-height: 13rem;
+    width: clamp(15rem, 20rem, 20rem);
+    display: flex;
+    flex-direction: column;
+}
+.card-img{
+    flex:75;
+    background-color: rgb(224, 245, 247);
+}
+.card-text{
+    background-color: rgb(223, 216, 216);
+    flex:25;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    align-items: center;
+}
+.card-text > p{
+    margin-right: 15px;
+}
+.text{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*section bottom div styling*/
+.sec-div-bottom{
+    flex: 30;
+    display: flex;
+}
+.div-bottom{
+    background-color: white;
+    flex: 50;
+    border: 1px solid gray;
+}
+
+
+/*aside-right styling*/
+.aside-right{
+    background-color: white;
+    flex: 27;
+    border: 1px solid gray;
+
+}
+.aside-right-div{
+    margin: 20px;
+    height: 95%;
+    /* width: 90%; */
+    width: clamp(20rem, 90%, 30rem);
+    background-color: white;
+    border: 2px dotted blue;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
