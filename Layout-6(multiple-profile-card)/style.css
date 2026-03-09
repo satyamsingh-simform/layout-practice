@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+.sec-left{
+    flex: 35;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.left-div-top{
+    flex: 55;
+    display: flex;
+    flex-direction: column;
+}
+.img-left{
+    flex: 70;
+    background-color: rgb(209, 206, 206);
+}
+.text-left{
+    flex: 30;
+    display: flex;
+}
+.text{
+    flex: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.text p{
+    background-color: rgb(209, 206, 206);
+    padding: 10px;
+    border-radius: 10px;
+}
+.p-1{
+    width: 60%;
+}
+.p-2{
+    width: 80%;
+}
+.round{
+    flex: 50;
+    display: flex;
+    align-items: center;
+}
+.round p{
+    background-color: rgb(209, 206, 206);
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%;
+
+}
+
+
+
+
+.left-div-mid{
+    flex: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+}
+.mid-div-1{
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(209, 206, 206);
+}
+.mid-div-2{
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(209, 206, 206);
+}
+.mid-div-3{
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(209, 206, 206);
+}
+.mid-div-4{
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(209, 206, 206);
+}
+
+
+.left-div-btm{
+    flex: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btm-div{
+    width: 100%;
+    padding: 18px;
+    border-radius: 20px;
+    background-color: rgb(209, 206, 206);
+
+}
+
+
+
+.sec-mid{
+    padding: 30px;
+    flex: 30;
+    display: flex;
+    flex-direction: column;
+}
+.mid-div-top{
+    flex: 20;
+    display: flex;
+}
+.mid-text{
+    flex: 70;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.text-1{
+    background-color: rgb(209, 206, 206);
+    padding: 10px;
+    border-radius: 10px;
+}
+.text-2{
+    background-color: rgb(209, 206, 206);
+    padding: 10px;
+    border-radius: 10px;
+}
+.mid-profile{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    flex: 30;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(209, 206, 206);
+    
+}
+
+
+.mid-div-btm{
+    flex: 80;
+}
+.mid-div-box{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(228, 224, 224);
+}
+
+
+.sec-right{
+    flex: 35;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.right-div-top{
+    flex: 70;
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px;     */
+}
+.h-line{
+    flex: 25;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.h-para{
+    width: 70%;
+    padding: 20px;
+    background-color: rgb(228, 224, 224);
+    border-radius: 30px;
+}
+.right-box{
+    flex: 50;
+    background-color: rgb(228, 224, 224);
+}
+
+.right-text{
+    flex: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.right-p-1{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228, 224, 224);
+    width: 60%;
+}
+.right-p-2{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228, 224, 224);
+    width: 30%;
+}
+.right-p-3{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228, 224, 224);
+    width: 90%;
+}
+
+.right-div-btm{
+    flex: 30;
+    display: flex;
+    padding: 20px 0;
+    gap: 20px;
+}
+.btm-left{
+    flex: 40;
+    background-color: rgb(228, 224, 224);
+}
+.btm-right{
+    flex: 60;
+    display: flex;
+    flex-direction: column;
+}
+.btm-right-para-1{
+    flex: 60;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.last-p-1{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228, 224, 224);
+    width: 90%;
+}
+.last-p-2{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228, 224, 224);
+    width: 70%;
+}
+.last-p-3{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228, 224, 224);
+    width: 80%;
+}
+
+.btm-right-para-2{
+    flex: 40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.last-p-4{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(228, 224, 224);
+    width: 90%;
+}
