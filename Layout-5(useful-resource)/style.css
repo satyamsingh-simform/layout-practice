@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.container{
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    flex: 5;
+}
+main{
+    flex: 90;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+section{
+    flex: 16;
+}
+.sec-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.sec-1-div-top{
+    height: 50px;
+    width: 50px;
+}
+.sec-1-div-btm{
+    height: 20px;
+    width: 250px;
+}
+
+.sec-2{
+    background-color: rgb(113, 145, 65);
+}
+
+.sec-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.sec-3-div-top{
+    height: 20px;
+    width: 200px;
+}
+.sec-3-div-btm{
+    display: flex;
+    gap: 20px;
+}
+.sec-3-para{
+    height: 100px;
+    width: 200px;
+}
+
+.sec-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+}
+.sec-4-div-left{
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+.sec-4-para,.sec-4-para-btm {
+    width: 90%;
+}
+.sec-4-para{
+    height: 20px;
+}
+.sec-4-para-btm{
+    height: 50px;
+}
+
+.sec-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+.sec-3-div-btm{
+    width: 60%;
+    height: 150px;
+}
+
+.sec-6{
+    display: flex;
+    gap: 5px;
+
+}
+.sec-6-div-left{
+    flex: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+.sec-6-div-btm{
+    width: 70%;
+    height: 100px;
+}
+
+footer{
+    flex: 5;
+}
