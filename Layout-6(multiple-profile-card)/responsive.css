@@ -1,0 +1,21 @@
+@media(max-width:1000px){
+    main{
+        flex-direction: column;
+        /* overflow: auto; */
+        height: 300vh;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+
+@media(max-width:700px){
+    main{
+        flex-direction: column;
+        /* overflow: auto; */
+        height: 300vh;
+        width: 90%;
+        min-width: 400px;
+    }
+}
+

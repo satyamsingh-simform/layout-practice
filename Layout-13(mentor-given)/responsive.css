@@ -1,0 +1,17 @@
+
+@media(max-width:1000px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .sec-right{
+        grid-column: 1/-1;
+    }
+}
+@media(max-width:650px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}

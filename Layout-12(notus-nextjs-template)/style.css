@@ -5,7 +5,7 @@
 }
 
 .container{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,9 @@
     margin-right: auto;
     background-color: gray;
 }
-
+svg{
+    display: none;
+}
 
 main{
     flex: 95;
@@ -100,10 +102,14 @@ section{
     color: white;
     border: none;
 }
+.top-sec-head div{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
 .top-sec-search{
     padding: 17px;
     width: clamp(12rem, 15vw, 50vw);
-    margin-left: auto;
     background-color: white;
 }
 .round-lg{
@@ -118,7 +124,6 @@ article{
     flex: 85;
     display: flex;
     gap: 50px;
-    /* align-items: center; */
     padding: 50px;
 }
 article div{
@@ -136,7 +141,6 @@ article div{
     gap: 50px;
     position: relative;
     top: -60px;
-    /* background-color: white; */
 }
 .botm-div-left{
     flex: 80;

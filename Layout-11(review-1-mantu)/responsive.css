@@ -1,0 +1,13 @@
+@media(max-width:700px){
+    main{
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        overflow: auto;
+    }
+    .box2{
+        grid-row:3/4 ;
+    }
+    .box5{
+        grid-row: 4/-1;
+    }
+}
